@@ -1,0 +1,22 @@
+{
+  "name": "书签收藏夹|奇乐客",
+  "version": "1.1.23",
+  "description":"奇乐客可以替代浏览器收藏夹，帮助人们收藏网站、网页、图片以及音频视频等内容，甚至是小游戏。奇乐客像苹果的浏览器Safari一样，会把内容抓取出来，去除所有广告，以杂志的方式阅读。通过奇乐客，用户可以找到有相同兴趣的朋友，并能一键分享到所有的第三方平台上。",
+  "permissions": ["history","management","bookmarks","*://*/*", "tabs","cookies"],
+  "app":{
+     "launch":{
+       "local_path":"main.html"
+     }
+  },
+  "chrome_url_overrides":{
+     "newtab":"main.html"
+   }, 
+  "background": {
+    "scripts": ["eventPage.js"]
+  },
+  "icons": {
+    "128": "qileke_logo.png",
+    "16": "16.png"
+  },
+  "manifest_version": 2
+}

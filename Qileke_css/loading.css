@@ -1,0 +1,37 @@
+.sy-loading {
+width: 150px;
+height: 30px;
+background-color: 
+black;
+position: absolute;
+z-index: 100000;
+top: 50%;
+left: 50%;
+margin-left: -50px;
+margin-top: -15px;
+opacity: 0.7;
+color: 
+white;
+text-align: center;
+padding-top: 5px;
+padding-left: 10px;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+.sy-loading .icon {
+float: left;
+margin-right: 10px;
+}
+.sy-wait {
+background: 
+transparent url("http://www.qileke.com/images/icon/wait.gif") no-repeat;
+width: 18px;
+height: 18px;
+}
+.sy-loading .loading-msg {
+float: left;
+}
+.hidden-loading
+{
+	visibility: hidden;
+}

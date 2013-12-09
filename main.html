@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="qileke.manifest">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+
+<title>奇乐导航</title>
+
+<script src="system_js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="system_js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+<script src="system_js/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="system_js/md5.js" type="text/javascript"></script>
+
+<script src="Qileke_js/common.js" type="text/javascript"></script>
+<script src="Qileke_js/start.js" type="text/javascript"></script>
+<script src="Qileke_js/notice.js" type="text/javascript"></script> 
+<script src="Qileke_js/background_change.js" type="text/javascript"></script>
+<script src="Qileke_js/mostvisit.js" type="text/javascript"></script>
+<script src="Qileke_js/program.js" type="text/javascript"></script>
+<script src="Qileke_js/history.js" type="text/javascript"></script>
+<script src="Qileke_js/recentClosed.js" type="text/javascript"></script>
+<script src="Qileke_js/thumbStorage.js" type="text/javascript"></script>
+<script src="Qileke_js/dailer.js" type="text/javascript"></script>
+<script src="Qileke_js/bookmark.js" type="text/javascript"></script> 
+<!-- <script src="Qileke_js/search.js" type="text/javascript"></script> -->
+<script src="Qileke_js/qilekeshow.js" type="text/javascript"></script>
+<script src="Qileke_js/onResize.js" type="text/javascript"></script>
+<script src="Qileke_js/config.js" type="text/javascript"></script>
+<script src="Qileke_js/tools.js" type="text/javascript"></script>
+<script src="Qileke_js/multiSearch.js" type="text/javascript"></script>
+
+<link  href="Qileke_css/html.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/qilekeapp.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/Tips.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/dailer.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/app_bookmark.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/daohang.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/loading.css" rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/login.css"   rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/ui-folder-qileke.css"  rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/qileke.css"  rel="stylesheet" type="text/css" />
+<link  href="Qileke_css/multiSearch.css"  rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin:0px">
+  <div id="disp">
+   <a id="User_Information"  style="display: none">
+      <img id="UserImage" style="float:right; height:50px;width:50px; margin-left:5px;" src="#">
+      <div id="UserName"   style="float:right; padding-top:10px;padding-right: 3px;"></div> 
+    </a> 
+  </div>
+
+   <div id = "notification" class = "layer_pop"> 
+    <p id = "pTips">版本更新至 Ver 1.1.23，欢迎使用！欢迎加入qq群20827608，感谢您的支持和反馈！<img id = "clo1" src = "image/closeNotice.png"  class = "closeImg" />
+    <span class="arrow_t" style="left:auto; right:20px;"></span>
+    </p>
+  </div>
+
+  <div id = "boo" class = "layer_boo">
+  <p class = "ppTips">书签全新布局，界面更美观<img id ="clo3" src = "image/closeNotice.png"  class = "closeImg" /></p>
+  <span class="arrow_t" style="left:auto; right:20px;"></span>
+  </div>
+
+  <div id = "bgTips" class = "layer_bg">
+  <p style = "font-size: 12px;font-family: 微软雅黑;margin-top: 4px;padding-left: 15px;padding-right: 25px;padding-top: 0px;">增加设置切换到默认、自定义设置功能选项。个性自定义导航条<img src = "image/closeNotice.png"  id = "clo5" class = "closeImg" /></p>
+  <span class="arrow_t" style="left:auto; right:20px;"></span>
+  </div>
+
+<!--  <div id = "thu" class = "layer_thu">
+  <p class = "ppTips">试试悬浮鼠标到书签、历史、常去网站，一键发送到拨号盘。新增手动添加功能<img src = "image/closeNotice.png" id = "clo2" class = "closeImg" /></p>
+  <span class="arrow_t" style="left:auto; right:20px;"></span>
+  </div> -->
+
+  <div id = "switchToDefault" style = "position:absolute;bottom:10px;left:15px;z-index:555;cursor:pointer"><img src = "default.png" title = "切换到默认" style = "height:36px;width:36px;" />
+  </div>
+
+  <div id = "tools" style = "position:absolute;bottom:10px;left:60px;z-index:555;cursor:pointer">
+    <img src = "image/tools.png" title = "设置" style = "height:36px;width:36px;" />
+  </div>
+
+  <div id="bar" align="center">
+   
+     <div class = "search_css" id = "bs">
+        <span style = "color:#FFF">书签搜索 </span>
+        <input  type="text" id="bookmarks-search" autocomplete="on" placeholder="按Esc键返回书签栏" >
+      </div>
+
+      <div class = "search_css" id = "historySearch">
+        <span style = "color:#FFF">历史搜索 </span>
+        <input  type="text" id="history-search" autocomplete="on">
+      </div>
+  <div id="multiSearch">
+  <ul class="search" id="search" style=" top: 37px; ">
+  <li class="icon google" id = "selected"></li>
+  <li class="v" style=""></li>
+  <li class="input"><input type="text" name="searchinput" id="searchinput"></li>
+  <li class="button" id = "clickToSearch"></li></ul>
+
+  <ul class="engine" id="engine" style=" top: 66px; display: none; ">
+  <li _engine="google" class="" id = "search_google">
+    <div class="icon google"></div>
+    <div class="title">谷歌</div>
+    <div class="checkbox"></div>
+  </li>
+  <li _engine="baidu" class="" id = "search_baidu">     <!--  ul.engine li.select -->
+    <div class="icon baidu"></div>
+    <div class="title">百度</div>
+    <div class="checkbox"></div>
+  </li>
+  <li _engine="bing" class="" id = "search_bing">
+    <div class="icon bing"></div>
+    <div class="title">必应</div>
+    <div class="checkbox"></div>
+  </li>
+    <li _engine="bing" class="" id = "search_taobao">
+    <div class="icon taobao"></div>
+    <div class="title">淘宝</div>
+    <div class="checkbox"></div>
+  </li>
+  </ul>
+  </div>
+
+  </div> 
+ 
+  <div id="fronter" style="background-image:-webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,87,111,1)), color-stop(80%,rgba(85,202,231,1)), color-stop(100%,rgba(0,201,255,0))); -webkit-background-size: 100%; -webkit-transform: rotate(0deg); background-position: 50% 50%; background-repeat: no-repeat no-repeat; ">  
+    
+      <div id="page_list_dailer" > </div>
+      <!-- <div id="page_list_qileke" style="display:none;"> -->
+
+
+<!-- </div> -->
+</div> 
+
+
+  <!-- clear recentlyClosed -->
+  <div id = "clearRecent" style = "display:none; position:fixed;position: fixed;left: 68px;top: 25px;z-index:9000">
+        <button id = "clearButton" class = "button_clear">清除所有</button>
+  </div>
+
+  
+  <div id="footer">
+      <div class="enable-cws-experiment" id="footer-content">
+
+        <div id = "logo" style = "float:left;">
+        <a href="http://www.qileke.com/" target="_blank">
+          <img id='logo-qileke' src="image/logo_nav.png"></a>
+        </div>
+
+  <ul id="nav" style = "float:left">
+  <li class="top" id = "dot-7" style="width:62px;">  <a class="top_link"> <span >拨号盘</span> </a></li>
+  
+  <li class="top" id = "dot-6" style="width:62px;">  <a href="#" id="privacy" class="top_link"><span >收藏夹</span></a></li>
+
+  <li class="top" id="dot-0" style="width:58px;"  >  <a href="#" id="bookmarks" class="top_link"><span >书&nbsp&nbsp签</span></a></li>
+  <li class="top" id = "dot-1" >  <a href="#" class="top_link">  <span>应用程序</span>  </a></li>
+
+  <li class="top" id = "dot-2" >  <a href="#" class="top_link">  <span>常去网站</span>  </a></li>
+
+  <li class="top" id = "dot-3" >  <a href="#" class="top_link">  <span>浏览历史</span>  </a></li>
+  <li class="top" id = "dot-4" >  <a href="#" class="top_link">  <span>最近关闭</span>  </a></li>
+  
+
+  <!-- <li class="top" id = "dot-5" ><a href="#" id="services" class="top_link"><span class="down">历史</span></a>
+  <ul class="sub">
+    <li id = "dot-4"><a href="#" class = "ff" > 最近关闭 </a></li>
+    <li id = "dot-3"><a href="#" class = "ff" > 浏览历史 </a></li>
+    <li id = "dot-2"><a href="#" class = "ff"> 常去网站 </a></li>
+  </ul>
+</li> -->
+  </ul>
+      </div>
+  </div>
+ 
+  <div id = "logout" style = "display:none;height:100%;width:250px;background-color:#fff;position:fixed;top:20px;right:0px;">
+    <div id = "song" style = "width:100%;height:100%;margin-top:90px;">
+      <div id="discover_qileke" class="logout_css" >别人都在看</div> 
+      <div id="changeBackground" class="logout_css" >试试换壁纸</div> 
+      <div id="friends_qileke" class="logout_css">好友</div> 
+      <div id="message_qileke" class="logout_css">消息</div> 
+      <div id="setting_qileke" class="logout_css">设置</div> 
+      <div id="tools_qileke" class="logout_css">工具</div> 
+      <div id="help_qileke" class="logout_css">帮助</div> 
+      <div id="logout_button" class="logout_css">退出</div> 
+
+    </div>
+  </div>
+
+  <div id="editdialog"></div>
+  <div id="deletedialog"></div>
+  <div id="adddialog"></div>
+  <div id="noticedialog"></div>
+  <div id="transferdialog"></div>
+  <div id="toolsdialog"></div>
+
+</body>
+
+</html>

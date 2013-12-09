@@ -1,0 +1,184 @@
+#page_list_mostvisit
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+
+#page_list_program
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+
+#page_list_bookmark
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+
+#page_list_qileke
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+
+#page_list_history
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+#page_list_dailer
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}
+#page_list_recentClosed
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}		
+
+#qilekefolder_list{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}
+
+#qilekecontent_show{
+	height:100%;
+	position: fixed;
+	width:100%;
+	/*overflow: auto;*/
+}
+#page_list_qileke
+{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}	
+#qilekelist_show{
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}
+
+#footer {
+font-weight: bold;
+/*background-color: #FFF;*/
+position: fixed;
+z-index: 55;
+width: 100%;
+bottom: 0px;
+background-image: url(../image/bg_nav.png); 
+background-size: 100%; -webkit-transform: rotate(0deg); 
+background-position: 50% 50%; 
+background-repeat: no-repeat no-repeat; /*border-top-width: thin;
+border-top-style: solid;
+background-image: url(../image/footer_bg.png);*/
+}
+
+#footer-content {
+display: -webkit-box;
+height: 55px;	 
+}
+#logo-qileke {
+	display: table-cell;
+	height: 29px;
+	vertical-align: middle;
+	/*background-color: rgba(255, 255, 255, 0.94);*/
+	width: 31px;
+	position: relative;
+	top: 12px;
+  } 
+  
+#bar {
+	height: 1px;
+	width: 100%;
+	top: 0px;
+	position: fixed;
+	z-index: 333;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(102, 204, 255, 0)), to(rgba(0, 153, 255, 0)));
+}	
+
+#chrome_logo {
+margin-right: 10px;
+display:table-cell; 
+vertical-align:middle;
+} 
+
+#dot-list {
+   -webkit-box-flex: 1;
+   -webkit-box-pack: center;
+   display: -webkit-box;
+   height: 100%;
+   list-style-type: none;
+   padding: 0;
+   }
+   	   
+.dot {
+  max-width: 80px;
+	-webkit-box-flex: 1;
+  -webkit-margin-end: 10px;
+  -webkit-padding-start: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  margin-top:-18px;
+  
+  }
+
+.dot-select {
+	
+	max-width: 80px;
+  -webkit-box-flex: 1;
+  -webkit-margin-end: 10px;
+  -webkit-padding-start: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  margin-top:-18px;
+  
+	}
+
+.selection-bar {
+   border-bottom: 5px solid;
+   border-color: #E9E9E9;
+   height: 10px;
+   margin-bottom: 7px;
+  }
+
+
+/*tool*/
+#toolshow {
+	height: 200px;
+	width: 400px;
+}
+.tool_hide {
+	height: 32px;
+	width: 400px;
+}
+.bar_name {
+	float: left;
+	height: 24px;
+	width: 150px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 30px;
+}
+.tool_pic {
+	height: 32px;
+	width: 90px;
+	margin-top: 3px;
+	margin-right: 40px;
+	margin-bottom: 3px;
+	margin-left: 30px;
+	float: left;
+	cursor: pointer;
+}

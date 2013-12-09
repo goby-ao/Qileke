@@ -1,0 +1,239 @@
+
+/*
+ * 定义收藏夹的展现形式，暂时一个格子展示
+ * */
+.folder_qileke
+{
+	border: 3px solid black;
+	width:200px;
+	height:200px;
+	list-style:none;
+	float:left;
+	margin:10px;
+}
+/*
+ *默认是不显示的 
+ **/
+.normal_hide_qileke
+{
+	display:none;
+}
+
+/*
+ *收藏夹容器的设置 
+ * 
+ **/
+#folder_container_qileke
+{
+	width:2000px;
+	overflow:hidden;
+}
+.wrapper_folder_qileke
+{
+	width:100%;
+	position:fixed;
+}
+#folder_list_qileke
+{
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+.hid_qileke
+{
+	/*margin-top:0px;*/
+	position: absolute;
+}
+
+/*
+ * 正常情况
+ * */
+.part-shade
+{
+	position: absolute;
+	z-index: 3;
+	top: auto;
+	right: 0;
+	width: 157px;
+	height: 100%;
+	overflow: hidden;
+	background-color: #444;
+}
+.title2
+{
+	
+	position: relative;
+	height: 19px;
+	overflow: hidden;
+	z-index: 4;
+	color:#DDD;
+	font-size:16px;
+	
+	margin: 1px 1px 1px 5px;
+}
+.description2
+{
+	color: #DDD;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	width: 100%;
+	height: 72px;
+	overflow: hidden;
+	position: relative;
+	z-index: 4;
+}
+.shade{
+	position: absolute;
+	z-index: 3;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 105px;
+	overflow: hidden;
+	background-image: url("www.qileke.com/images/bg/item-shade.png"); 
+}
+.folder
+{
+	width:160px;
+	height:200px;
+	font-size:14px;
+	margin:6px;
+	float:left;
+	border-left: 2px solid;
+	cursor: pointer;
+	border-color: #1774D4;
+	
+}
+
+/*
+ * 添加默认的folder展示的样式
+ * */
+ .sy-light-bg0 {
+        background-color: #1774D4 !important;
+	
+}
+ .sy-light-bg1 {
+        background-color: #E25D01 !important;	
+}
+
+ .sy-light-bg10 {
+ 	position: relative;
+        background-color: #444 !important;	
+}
+
+
+ .sy-light-bg10 .folder:hover{
+        background-color: #1774D4;	
+}
+
+.changeimage:hover{
+	background-color:#1774D4;
+}
+.changecolor{
+	position: absolute;
+	height:100%;
+}
+.changecolor:hover{
+	background-color: #1774D4;	
+}
+h2.title
+{
+	
+	position: relative;
+	height: 65px;
+	overflow: hidden;
+	
+	z-index: 4;
+	width:148px;
+	color:#DDD;
+	font-size:16px;
+	margin: 20px 1px 1px 10px;
+}
+.description
+{
+	color: #DDD;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: 'Microsoft Yahei';
+	text-align: left;
+	width: 100%;
+	height: 72px;
+	overflow: hidden;
+	position: relative;
+	z-index: 4;
+	margin: 1px 1px 1px 4px;
+	width:155px;
+}
+#thelist
+{
+	/*
+	 * 暂定展示的长度
+	 * */
+	width:1100px;
+}
+#wrapper {
+	z-index:1;
+	top:45px; bottom:0; left:0;
+	width:100%;
+	/*position:absolute;*/
+	overflow:auto;
+	margin-top: 15px;
+}
+
+#scroller {
+	width:1400px;
+	height:170px;
+	float:left;
+	padding:0;
+}
+
+/*
+ * line-height:40px;
+ * 	height:200px;
+ * */
+#pullLeft{
+	background-color: #1774D4 !important;
+	height:160px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#DDD;
+	width: 60px;
+	float: left;
+	
+}
+#pullLeft .pullLeftIcon  {
+	display:block; float:left;
+	width:60px; height:80px;
+	background:url(../images/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 40px; background-size:40px 40px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:20ms;	
+}
+/*
+ * -webkit-transform:rotate(90deg) translateZ(0);
+ * */
+#pullLeft .pullLeftIcon  {
+	-webkit-transform:rotate(180deg) translateZ(0);
+}
+#pullLeft.flip .pullLeftIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullLeft.loading .pullLeftIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(180deg) translateZ(0); }
+}
